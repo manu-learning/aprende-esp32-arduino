@@ -1,0 +1,3 @@
+ entrada digital 
+ entradas salidas digitales 
+ salida digital 
