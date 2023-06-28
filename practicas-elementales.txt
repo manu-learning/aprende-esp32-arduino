@@ -1,3 +1,7 @@
  entrada digital 
+ entrada analogica 
  entradas salidas digitales 
+ seniales pwm 
  salida digital 
+ salida analogica 
+ encendido leds con potenciometro 

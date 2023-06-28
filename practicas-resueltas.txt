@@ -1,4 +1,8 @@
-practicas-elementales (actualizado, 26-06-2023-00:50:08)
+practicas-elementales (actualizado, 28-06-2023-17:51:05)
  entrada digital 
+ entrada analogica 
  entradas salidas digitales 
+ seniales pwm 
  salida digital 
+ salida analogica 
+ encendido leds con potenciometro 
