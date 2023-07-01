@@ -1,4 +1,5 @@
-* practicas-elementales (actualizado, 01-07-2023-12:34:41)
+* practicas resueltas
+** practicas-elementales (actualizado, 01-07-2023-12:52:36)
 - lectura de sensor tactil
 - intensidad led con senial pwm
 - interrupciones con sensores tactiles

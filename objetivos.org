@@ -1,0 +1,3 @@
+* Objetivos
+- Aprender electrónica
+- Combinar programación y electrónica

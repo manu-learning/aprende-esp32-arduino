@@ -1,4 +1,8 @@
-* practicas-elementales (actualizado, 01-07-2023-12:34:41)
+* Objetivos
+- Aprender electrónica
+- Combinar programación y electrónica
+* practicas resueltas
+** practicas-elementales (actualizado, 01-07-2023-12:52:36)
 - lectura de sensor tactil
 - intensidad led con senial pwm
 - interrupciones con sensores tactiles
