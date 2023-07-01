@@ -2,20 +2,24 @@ include utils.mk
 
 PRACTICAS_ELEMENTALES=$(wildcard practicas/elementales/*.cpp)
 
-actualizar-listado-practicas: practicas-resueltas.txt
+actualizar-listado-practicas: practicas-resueltas.txt README.org
+
+README.org: practicas-resueltas.txt
+	cat $< > $@
 
 practicas-resueltas.txt: practicas-elementales.txt
 	@$(TRUNCATE_CLEAR_CONTENT) $@
 	$(foreach archivo, $^,\
-		echo "$(basename $(archivo)) (actualizado, $(shell $(DATE_NOW)))" >> $@; \
+		echo "$(basename * $(archivo)) (actualizado, $(shell $(DATE_NOW)))" >> $@; \
 		cat $(archivo) >> $@ ; \
 	)
 
 practicas-elementales.txt: $(PRACTICAS_ELEMENTALES)
 	@$(TRUNCATE_CLEAR_CONTENT) $@
 	@$(foreach archivo, $^, \
-		echo " $(basename $(notdir $(archivo))) " \
+		echo "$(basename $(notdir $(archivo)))" \
 		| $(TR_FORMAT_FILE_NAMES) \
+		| $(SED_FORMAT_ITEM_LIST) \
 		>> $@ ; \
 	)
 

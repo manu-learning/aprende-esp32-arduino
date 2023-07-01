@@ -1,8 +1,12 @@
-practicas-elementales (actualizado, 28-06-2023-17:51:05)
- entrada digital 
- entrada analogica 
- entradas salidas digitales 
- seniales pwm 
- salida digital 
- salida analogica 
- encendido leds con potenciometro 
+* practicas-elementales (actualizado, 01-07-2023-12:34:41)
+- lectura de sensor tactil
+- intensidad led con senial pwm
+- interrupciones con sensores tactiles
+- lectura de potenciometro
+- lectura de pulsador
+- intensidad led con conversor dac
+- encender leds con potenciometro
+- interrupcion de hardware
+- parpadeo controlado de led
+- encender led con sensor tactil
+- parpadeo de led

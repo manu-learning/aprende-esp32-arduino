@@ -1,7 +1,11 @@
- entrada digital 
- entrada analogica 
- entradas salidas digitales 
- seniales pwm 
- salida digital 
- salida analogica 
- encendido leds con potenciometro 
+- lectura de sensor tactil
+- intensidad led con senial pwm
+- interrupciones con sensores tactiles
+- lectura de potenciometro
+- lectura de pulsador
+- intensidad led con conversor dac
+- encender leds con potenciometro
+- interrupcion de hardware
+- parpadeo controlado de led
+- encender led con sensor tactil
+- parpadeo de led
