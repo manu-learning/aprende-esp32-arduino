@@ -22,11 +22,6 @@ $(TEMP_DIR)/ejercicios-resueltos.txt: $(TEMP_DIR)/ejercicios-elementales.txt
 		cat $(archivo) >> $@ ; \
 	)
 
-test: $(TEMP_DIR)/test.txt
-	@echo $<
-	@echo $(basename $<)
-	@echo $(basename $(notdir $<))
-
 $(TEMP_DIR)/ejercicios-elementales.txt: $(ELEMENTARY_EXERCISES_FILES)
 	@$(TRUNCATE_CLEAR_CONTENT) $@
 	@$(foreach archivo, $^, \
