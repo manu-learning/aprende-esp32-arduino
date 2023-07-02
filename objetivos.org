@@ -1,7 +1,0 @@
-* Objetivos principales
-- Crear software divertido :)
-- Aprender electrónica con la placa de minicontrolador ESP32
-- Aprender linux desde una placa de microordenador Raspberry Pi
-- Integrar conceptos de programación y electrónica
-* Otros objetivos
-- utilizar algún *protocolo de comunicación* (MQTT, WebSocket, ..) entre los dispositivos ESP32 y Raspberry Pi

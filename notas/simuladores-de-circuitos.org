@@ -1,0 +1,20 @@
+* Simuladores de Circuitos electrónicos
+** Soportados en Linux
+   - Qucs
+   - Qucs-s (más reciente, basado en qucs)
+   - Oregano
+** Referencias
+*** Referencias Oficiales
+    1. https://qucs.sourceforge.net/install.html
+    2. https://ra3xdh.github.io/
+    3. https://github.com/drahnr/oregano
+*** Referencias Extraoficiales
+    1. [[https://electronicaonline.net/circuito-electrico/simulador-de-circuitos/][Los mejores simuladores de circuitos eléctricos (electronicaonline.net)]]
+    2. [[https://blog.desdelinux.net/oregano-app-capturar-esquemas-simular-circuitos-electronicos/][Oregano app, captura esquemas y simula circuitos electrónicos (blog.desdelinux.net)]]
+*** Videotutoriales (youtube)
+    1. [[https://www.youtube.com/watch?v=wx6ysVJEjqQ][Intro a Spice con ngspice - By Automática EIE]]
+    2. [[https://www.youtube.com/watch?v=k-TdHIStJwk][Simulación de circuitos con QUCS - By xzy uvw]]
+    3. [[https://www.youtube.com/watch?v=3cOvl9z74MU][Uso de QUCS - By Mirpas formación]]
+    4. [[https://www.youtube.com/watch?v=zKmLZHdqEHI][Simulación transitoria con ngspice - By Automática EIE]]
+    5. [[https://www.youtube.com/watch?v=90RaVy38DB8][Qucs-S Simple Spice Simulation - By Kasper Nielsen]]
+    6. [[https://www.youtube.com/watch?v=-ch5xiX4ohE][Qucs Studio, Tutorial Análisis de Circuitos y RF - By Electgpl]]
