@@ -9,8 +9,6 @@ $(TEMP_DIR):
 
 update-list-exercises: $(TEMP_DIR) $(TEMP_DIR)/ejercicios-resueltos.txt README.org
 
-#README.org: $(NOTES_DIR)/objetivos.org $(TEMP_DIR)/ejercicios-resueltos.txt $(NOTES_DIR)/simuladores-de-circuitos.org
-
 README.org: $(NOTES_FILES) $(TEMP_DIR)/ejercicios-resueltos.txt
 	cat $^ > $@
 
