@@ -2,10 +2,10 @@
 <Properties>
   <View=0,0,800,800,1,0,0>
   <Grid=10,10,1>
-  <DataSet=resistivo-circuito.dat>
-  <DataDisplay=resistivo-circuito.dpl>
+  <DataSet=circuito-resistivo-1-simulacion.dat>
+  <DataDisplay=circuito-resistivo-1-simulacion.dpl>
   <OpenDisplay=1>
-  <Script=resistivo-circuito.m>
+  <Script=circuito-resistivo-1-simulacion.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
