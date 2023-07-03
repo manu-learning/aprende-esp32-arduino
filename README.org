@@ -26,7 +26,7 @@
     5. [[https://www.youtube.com/watch?v=90RaVy38DB8][Qucs-S Simple Spice Simulation - By Kasper Nielsen]]
     6. [[https://www.youtube.com/watch?v=-ch5xiX4ohE][Qucs Studio, Tutorial Análisis de Circuitos y RF - By Electgpl]]
 * ejercicios resueltos
-** ejercicios-elementales (actualizado, 02-07-2023-20:09:48)
+** microcontrolador-esp32-ejercicios (actualizado, 03-07-2023-02:11:21)
 - lectura de sensor tactil
 - intensidad led con senial pwm
 - interrupciones con sensores tactiles

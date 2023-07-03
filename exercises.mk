@@ -1,5 +1,5 @@
-ELEMENTARY_EXERCISES_DIR=ejercicios/elementales
-ELEMENTARY_EXERCISES_FILES=$(wildcard $(ELEMENTARY_EXERCISES_DIR)/*.cpp)
+MICROCONTROLLER_ESP32_EXERCISES_DIR=ejercicios/microcontroladores/esp32
+MICROCONTROLLER_ESP32_EXERCISES_FILES=$(wildcard $(MICROCONTROLLER_ESP32_EXERCISES_DIR)/*.cpp)
 TEMP_DIR=.tmp
 NOTES_DIR=notas
 NOTES_FILES=$(wildcard $(NOTES_DIR)/*.org)
@@ -12,7 +12,7 @@ update-list-exercises: $(TEMP_DIR) $(TEMP_DIR)/ejercicios-resueltos.txt README.o
 README.org: $(NOTES_FILES) $(TEMP_DIR)/ejercicios-resueltos.txt
 	cat $^ > $@
 
-$(TEMP_DIR)/ejercicios-resueltos.txt: $(TEMP_DIR)/ejercicios-elementales.txt
+$(TEMP_DIR)/ejercicios-resueltos.txt: $(TEMP_DIR)/microcontrolador-esp32-ejercicios.txt
 	@$(TRUNCATE_CLEAR_CONTENT) $@
 	echo $(basename $(notdir $@)) | $(TR_FORMAT_FILE_NAMES) | $(SED_FORMAT_HEADER) >> $@
 	$(foreach archivo, $^,\
@@ -20,7 +20,7 @@ $(TEMP_DIR)/ejercicios-resueltos.txt: $(TEMP_DIR)/ejercicios-elementales.txt
 		cat $(archivo) >> $@ ; \
 	)
 
-$(TEMP_DIR)/ejercicios-elementales.txt: $(ELEMENTARY_EXERCISES_FILES)
+$(TEMP_DIR)/microcontrolador-esp32-ejercicios.txt: $(MICROCONTROLLER_ESP32_EXERCISES_FILES)
 	@$(TRUNCATE_CLEAR_CONTENT) $@
 	@$(foreach archivo, $^, \
 		echo "$(basename $(notdir $(archivo)))" \
