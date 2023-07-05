@@ -7,7 +7,8 @@ NOTES_FILES=$(wildcard $(NOTES_DIR)/*.org)
 $(TEMP_DIR):
 	mkdir --verbose $@
 
-update-list-exercises: $(TEMP_DIR) $(TEMP_DIR)/ejercicios-resueltos.txt README.org
+##@ Ejercicios
+update-list-exercises: $(TEMP_DIR) $(TEMP_DIR)/ejercicios-resueltos.txt README.org ## Actualizar listado de ejercicios del README
 
 README.org: $(NOTES_FILES) $(TEMP_DIR)/ejercicios-resueltos.txt
 	cat $^ > $@
@@ -29,7 +30,7 @@ $(TEMP_DIR)/microcontrolador-esp32-ejercicios.txt: $(MICROCONTROLLER_ESP32_EXERC
 		>> $@ ; \
 	)
 
-clean:
+clean: ## Eliminar archivos temporales generados
 	@$(RM) $(TEMP_DIR)/*.txt
 
 .PHONE: clean update-list-exercises
