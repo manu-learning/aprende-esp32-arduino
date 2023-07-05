@@ -1,0 +1,17 @@
+* wxMaxima Tips
+** Unidades en Ohms
+cuando utilizamos las unidades en Ohm por primera vez, se mostrará otra unidad equivalente,
+ si sólo queremos mostrar la unidad Ohm ejecutar lo siguiente..
+1) 10*Ohm + 10*Ohm ó cualquier ecuación, para que devuelva un resultado
+2) setunits(Ohm) esto cambiará la unidad del resultado anterior por Ohm
+esos dos pasos se realizan una única vez
+** Utilizar los valores de variables
+- si definimos una variable así ~R=7.5;~ y luego hacemos ~R+1~; el resultado NO será el deseado
+- si definimos una variable así ~R:7.5;~ y luego hacemos ~R+1~; el resultado SI será el deseado
+- conclusión, definir las variables con ~:~ porque el ~=~ es para las funciones
+** Eliminar el valor asignado a variables
+- ejecutar ~kill(nombre de la variable)~
+- para eliminar varias, separarlas con el símbolo de la coma ~,~
+** Referencias
+1. http://www.scotchildress.com/wxmaxima/Variables_Functions_Equations/Variables_Functions_and_Equations.html
+2. https://www.studocu.com/bo/document/universidad-mayor-de-san-andres/electronica/wxmaxima-manual-para-el-equipo-wxmaxima/20520463/download/wxmaxima-manual-para-el-equipo-wxmaxima.pdf
