@@ -4,7 +4,15 @@ QUCSS_VERSION=1.1.0
 QUCSS_NAME=Qucs-S-v$(QUCSS_VERSION).x86_64.AppImage
 QUCSS_URL_DOWNLOAD=https://github.com/ra3xdh/qucs_s/releases/download/$(QUCSS_VERSION)/$(QUCSS_NAME)
 
-##@ Simuladores
+##@ Herramientas de Cálculo Matemático
+install-wxmaxima: ## instalar wxMaxima (la interfáz gráfica de Maxima)
+	sudo aptitude install wxmaxima
+
+##@ Procesadores de Documento
+install-lyx: ## instalar Lyx (utiliza LaTeX)
+	sudo aptitude install lyx
+
+##@ Simuladores (Instalación)
 
 # Nota sobre las opciones de curl:
 # - si sólo utilizamos `curl -O url-del-binario-github` entonces no se descargará de manera correcta
@@ -30,6 +38,11 @@ install-circuit-simulator-qucs: ## instalar simulador Qucs (más antiguo)
 install-circuit-simulator-oregano: ## instalar simulador Oregano
 	sudo aptitude install oregano
 
+##@ Simuladores (Ejecución)
+
 run-circuit-simulator-qucss: ## ejecutar simulador Qucs-S
 	cd $(CIRCUIT_SIMULATORS_DIR) \
 	&& ./$(QUCSS_NAME)
+
+run-circuit-simulator-oregano: ## ejecutar simulador Oregano
+	oregano
