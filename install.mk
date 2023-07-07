@@ -4,15 +4,23 @@ QUCSS_VERSION=1.1.0
 QUCSS_NAME=Qucs-S-v$(QUCSS_VERSION).x86_64.AppImage
 QUCSS_URL_DOWNLOAD=https://github.com/ra3xdh/qucs_s/releases/download/$(QUCSS_VERSION)/$(QUCSS_NAME)
 
-##@ Herramientas de Cálculo Matemático
-install-wxmaxima: ## instalar wxMaxima (la interfáz gráfica de Maxima)
+##@ Herramientas de Cálculo Matemático (Instalación/Ejecución)
+install-wxmaxima: ## interfáz gráfica de Maxima
 	sudo aptitude install wxmaxima
 
-##@ Procesadores de Documento
-install-lyx: ## instalar Lyx (utiliza LaTeX)
+# TODO: debería ejecutar en foreground sin ocupar la terminal actual
+run-wxmaxima: ##
+	wxmaxima
+
+##@ Procesadores de Documento (Instalación/Ejecución)
+install-lyx: ## utiliza LaTeX
 	sudo aptitude install lyx
 
-##@ Simuladores (Instalación)
+# TODO: debería ejecutar en foreground sin ocupar la terminal actual
+run-lyx:
+	lyx
+
+##@ Simuladores (Instalación/Ejecución)
 
 # Nota sobre las opciones de curl:
 # - si sólo utilizamos `curl -O url-del-binario-github` entonces no se descargará de manera correcta
@@ -23,7 +31,7 @@ install-lyx: ## instalar Lyx (utiliza LaTeX)
 # - opción -J 	por --remote-header-name
 # - opción -O 	por --remote-name
 #
-download-circuit-simulator-qucss: install-qucss-dependencies ## descargar simulador Qucs-S
+install-qucss: install-qucss-dependencies ## simulador Qucs-S (recomendado)
 	cd $(CIRCUIT_SIMULATORS_DIR) \
 	&& curl --location --remote-header-name --remote-name $(QUCSS_URL_DOWNLOAD) \
 	&& chmod u+x $(QUCSS_NAME)
@@ -31,18 +39,17 @@ download-circuit-simulator-qucss: install-qucss-dependencies ## descargar simula
 install-qucss-dependencies:
 	sudo aptitude install ngspice build-essential cmake qtbase5-dev qttools5-dev libqt5svg5-dev flex bison
 
-install-circuit-simulator-qucs: ## instalar simulador Qucs (más antiguo)
+install-qucs: ## simulador Qucs (más antiguo)
 	sudo apt-add-repository ppa:qucs/qucs \
 	&& sudo aptitude install qucs
 
-install-circuit-simulator-oregano: ## instalar simulador Oregano
+install-oregano: ##
 	sudo aptitude install oregano
 
-##@ Simuladores (Ejecución)
-
-run-circuit-simulator-qucss: ## ejecutar simulador Qucs-S
+run-qucss: ##
 	cd $(CIRCUIT_SIMULATORS_DIR) \
-	&& ./$(QUCSS_NAME)
+        && ./$(QUCSS_NAME)
 
-run-circuit-simulator-oregano: ## ejecutar simulador Oregano
+run-oregano: ##
 	oregano
+
