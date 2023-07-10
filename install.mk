@@ -31,7 +31,7 @@ run-lyx:
 # - opción -J 	por --remote-header-name
 # - opción -O 	por --remote-name
 #
-install-qucss: install-qucss-dependencies ## simulador Qucs-S (recomendado)
+install-qucss: install-qucss-dependencies ## simulador sólo con diseño esquemático (recomendado)
 	cd $(CIRCUIT_SIMULATORS_DIR) \
 	&& curl --location --remote-header-name --remote-name $(QUCSS_URL_DOWNLOAD) \
 	&& chmod u+x $(QUCSS_NAME)
@@ -39,12 +39,18 @@ install-qucss: install-qucss-dependencies ## simulador Qucs-S (recomendado)
 install-qucss-dependencies:
 	sudo aptitude install ngspice build-essential cmake qtbase5-dev qttools5-dev libqt5svg5-dev flex bison
 
+install-fritzing: ## simulación en protoboard + diseño esquemático + diseño de PCB (recomendado)
+	sudo aptitude install fritzing
+
 install-qucs: ## simulador Qucs (más antiguo)
 	sudo apt-add-repository ppa:qucs/qucs \
 	&& sudo aptitude install qucs
 
 install-oregano: ##
 	sudo aptitude install oregano
+
+run-fritzing: ##
+	fritzing
 
 run-qucss: ##
 	cd $(CIRCUIT_SIMULATORS_DIR) \
